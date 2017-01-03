@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- Base Definition -->
+	<definition name="base-definition"
+				template="/WEB-INF/views/tiles/layout/mainWindow.jsp">
+		<put-attribute name="title" value=""/>		
+		<put-attribute name="header" value="/WEB-INF/views/tiles/template/header.jsp"/>
+		<put-attribute name="body" value=""/>
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/template/footer.jsp"/>
+	</definition>
+	
+	<!-- Home Page -->
+	<definition name="home" extends="base-definition">
+		<put-attribute name="title" value="Welcome"/>
+		<put-attribute name="body" value="/WEB-INF/views/tiles/home.jsp"/>
+	</definition>
+
+	<!-- login page -->
+	<definition name="login" extends="base-definition">
+		<put-attribute name="title" value="Login"/>
+		<put-attribute name="body" value="/WEB-INF/views/tiles/common/login.jsp"/>
+	</definition>
+	
+	<!-- Sign Up Page -->
+	<definition name="signup" extends="base-definition">
+		<put-attribute name="title" value="Sign-Up"/>
+		<put-attribute name="body" value="/WEB-INF/views/tiles/common/signup.jsp"/>
+	</definition>
+	<!-- User Edit Page -->
+	<definition name="useredit" extends="base-definition">
+		<put-attribute name="title" value="UserEdit"/>
+		<put-attribute name="body" value="/WEB-INF/views/tiles/common/useredit.jsp"/>
+	</definition>
+	
+	<!-- Thank You Page -->
+	<definition name="thankyou" extends="base-definition">
+		<put-attribute name="title" value="Thank You"/>
+		<put-attribute name="body" value="/WEB-INF/views/tiles/common/thankyou.jsp"/>
+	</definition>
+
+    <!--  restaurant views -->
+    <definition name="restaurantList" extends="base-definition">
+        <put-attribute name="title" value="Restaurant List"/>
+        <put-attribute name="body" value="/WEB-INF/views/tiles/restaurant/list.jsp"/>
+    </definition>
+
+    <definition name="restaurantDetails" extends="base-definition">
+        <put-attribute name="title" value="Restaurant Detail"/>
+        <put-attribute name="body" value="/WEB-INF/views/tiles/restaurant/details.jsp"/>
+    </definition>
+    
+    <!-- User Dash Board -->
+    <definition name="userDashBoard" extends="base-definition">
+        <put-attribute name="title" value="Home"/>
+        <put-attribute name="body" value="/WEB-INF/views/tiles/restaurant/RestaurentList.jsp"/>
+    </definition>
+    
+    <!-- Cart -->
+    <definition name="orderCart" extends="base-definition">
+    	<put-attribute name="tittle" value="OrderCart"/>
+    	<put-attribute name="body" value="/WEB-INF/views/tiles/restaurant/cart.jsp" />
+    </definition>
+    
+    <!-- Payment -->
+    <definition name="paymentPage" extends="base-definition">
+    	<put-attribute name="tittle" value="Payment"/>
+    	<put-attribute name="body" value="/WEB-INF/views/tiles/restaurant/Payment.jsp" />
+    </definition>
+
+	<!-- admin views -->
+    <definition name="adminDashboard" extends="base-definition">
+		<put-attribute name="header" value="/WEB-INF/views/tiles/template/headerAdmin.jsp"/>
+        <put-attribute name="title" value="Restaurant Detail"/>
+        <put-attribute name="body" value="/WEB-INF/views/tiles/admin/dashboard.jsp"/>
+    </definition>
+
+	<definition name="addRestaurant" extends="base-definition">
+        <put-attribute name="header" value="/WEB-INF/views/tiles/template/headerAdmin.jsp"/>
+		<put-attribute name="title" value="Restaurant Detail"/>
+		<put-attribute name="body" value="/WEB-INF/views/tiles/admin/addRestaurant.jsp"/>
+	</definition>
+
+	<definition name="addMenu" extends="base-definition">
+        <put-attribute name="header" value="/WEB-INF/views/tiles/template/headerAdmin.jsp"/>
+		<put-attribute name="title" value="Restaurant Detail"/>
+		<put-attribute name="body" value="/WEB-INF/views/tiles/admin/addMenu.jsp"/>
+	</definition>
+	<definition name="addFood" extends="base-definition">
+        <put-attribute name="header" value="/WEB-INF/views/tiles/template/headerAdmin.jsp"/>
+		<put-attribute name="title" value="Restaurant Detail"/>
+		<put-attribute name="body" value="/WEB-INF/views/tiles/admin/addFood.jsp"/>
+	</definition>
+	
+	<!--  Order Address -->
+	<definition name="orderAddress" extends="base-definition">
+		<put-attribute name="title" value="Delivery Address"/>
+		<put-attribute name="body" value="/WEB-INF/views/tiles/restaurant/OrderAddress.jsp"/> 
+	</definition>
+	
+	<!--  User Orders -->
+	<definition name="UserOrders" extends="base-definition">
+		<put-attribute name="title" value="Your Orders"/>
+		<put-attribute name="body" value="/WEB-INF/views/tiles/restaurant/Orders.jsp"></put-attribute>
+	</definition>
+	
+	<!--  Thank You Shopping -->
+	<definition name="ThankYouShopping" extends="base-definition">
+		<put-attribute name="title" value="Thank You"/>
+		<put-attribute name="body" value="/WEB-INF/views/tiles/common/ThankYouShopping.jsp"></put-attribute>
+	</definition>
+
+</tiles-definitions>
